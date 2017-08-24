@@ -17,13 +17,14 @@ class App extends Component {
         const { sentences, fetching, getSentences, clearSentences } = this.props;
         return (<div className="app">
             <h3>Random sentences:</h3>
-            {sentences.map((sentence, i) => <Sentence key={`sentence-${i}`} data={sentence}/>)}
+            {sentences.length > 0 ? sentences.map((sentence, i) => <Sentence key={`sentence-${i}`} data={sentence}/>)
+                : !fetching && <div className="error"> No available sentences! </div> }
             {fetching ?
                 <div className="preloader">
                     <img src={preloader} alt="preloader"/>
                 </div> :
                 <div className="button-group">
-                    <button className="button" onClick={getSentences}> Get more</button>
+                    <button className="button" onClick={getSentences}> Show more</button>
                     <button className="button" onClick={clearSentences}> Clear all</button>
                 </div>}
         </div>);

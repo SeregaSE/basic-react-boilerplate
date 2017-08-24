@@ -2,5 +2,7 @@
 
 TODO plan:
 - [ ] add webpack.config.[prod/dev].js
-- [ ] add branch with react + mobX
 - [ ] add css-modules
+- [ ] add es-lint
+- [ ] add tests
+- [ ] add branch with react + mobX
