@@ -1,6 +1,14 @@
 ### Simple and minimalistic boilerplate for React
 Made with:
-|![alt text](https://github.com/SeregaSE/basic-react-boilerplate/blob/master/docs/img/react.svg "React logo")|![alt text](https://github.com/SeregaSE/basic-react-boilerplate/blob/master/docs/img/redux.svg "Redux logo")|
+<p align="center">
+  <a href="https://reacttraining.com/react-router/">
+    <img alt="react logo" src="https://github.com/SeregaSE/basic-react-boilerplate/blob/master/docs/img/react.svg" width="144">
+  </a>
+  <a href="https://reacttraining.com/react-router/">
+      <img alt="redux logo" src="https://github.com/SeregaSE/basic-react-boilerplate/blob/master/docs/img/redux.svg" width="144">
+   </a>
+</p>
+
 Boilerplate helps you start writing react-redux apps fast and easy.
 
 #### Quick start
@@ -10,8 +18,10 @@ cd my-app
 npm install
 npm run dev
 ```
-By default go to localhost:8080 at your browser for example.
+By default go to [http://localhost:8080/](http://localhost:8080/) at your browser for example.
 ![alt text](https://github.com/SeregaSE/basic-react-boilerplate/blob/master/docs/img/example.png "Example app screenshot")
+When you are ready to deploy to production, create a bundle with `npm run build`.
+
 **Branches:**
 * master - inludes only react and redux
 * feature/react-redux-router - includes react, redux, react-router integrated with redux
