@@ -1,5 +1,8 @@
 ### Simple and minimalistic boilerplate for React
-Made for easy and fast start writing react-redux apps.
+Made with:
+![alt text](https://github.com/SeregaSE/basic-react-boilerplate/blob/master/docs/img/react.svg "React logo")
+![alt text](https://github.com/SeregaSE/basic-react-boilerplate/blob/master/docs/img/redux.svg "Redux logo")
+Boilerplate helps you start writing react-redux apps fast and easy.
 
 #### Quick start
 ```sh
