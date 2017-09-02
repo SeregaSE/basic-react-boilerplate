@@ -8,8 +8,8 @@ cd my-app
 npm install
 npm run dev
 ```
-By default go to localhost:8080 at your broweser for example.
-
+By default go to localhost:8080 at your browser for example.
+![alt text](https://github.com/SeregaSE/basic-react-boilerplate/blob/master/docs/img/example.png "Example app screenshot")
 **Branches:**
 * master - inludes only react and redux
 * feature/react-redux-router - includes react, redux, react-router integrated with redux
