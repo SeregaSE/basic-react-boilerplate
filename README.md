@@ -23,7 +23,7 @@ By default go to [http://localhost:8080/](http://localhost:8080/) at your browse
 When you are ready to deploy to production, create a bundle with `npm run build`.
 
 **Branches:**
-* master - inludes only react and redux
+* master - includes only react and redux
 * feature/react-redux-router - includes react, redux, react-router integrated with redux
 
 **TODO list:**
