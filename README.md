@@ -22,9 +22,10 @@ By default go to [http://localhost:8080/](http://localhost:8080/) at your browse
 ![alt text](https://github.com/SeregaSE/basic-react-boilerplate/blob/master/docs/img/example.png "Example app screenshot")
 When you are ready to deploy to production, create a bundle with `npm run build`.
 
+
 **Branches:**
-* master - includes only react and redux
-* feature/react-redux-router - includes react, redux, react-router integrated with redux
+* [master](https://github.com/SeregaSE/basic-react-boilerplate) - includes only react and redux
+* [react-redux-router](https://github.com/SeregaSE/basic-react-boilerplate/tree/feature/react-router-redux) - includes react, redux, react-router integrated with redux
 
 **TODO list:**
 - [ ] add es-lint
