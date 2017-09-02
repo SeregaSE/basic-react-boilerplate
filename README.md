@@ -1,10 +1,10 @@
 ### Simple and minimalistic boilerplate for React
 Made with:
 <p align="center">
-  <a href="https://reacttraining.com/react-router/">
+  <a href="https://github.com/facebook/react">
     <img alt="react logo" src="https://github.com/SeregaSE/basic-react-boilerplate/blob/master/docs/img/react.svg" width="144">
   </a>
-  <a href="https://reacttraining.com/react-router/">
+  <a href="https://github.com/reactjs/redux">
       <img alt="redux logo" src="https://github.com/SeregaSE/basic-react-boilerplate/blob/master/docs/img/redux.svg" width="144">
    </a>
 </p>
