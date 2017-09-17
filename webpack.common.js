@@ -1,20 +1,8 @@
-const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
     entry: './src/index.js',
-
-    devtool: 'cheap-module-source-map',
-
-    devServer: {
-        contentBase: './build',
-        hot: true,
-        inline: true,
-        open: true
-    },
 
     module: {
         rules: [
@@ -27,23 +15,6 @@ module.exports = {
                         presets: ['env', 'react', 'stage-2']
                     }
                 }
-            },
-
-            {
-                test: /\.css$/,
-                use: ExtractTextPlugin.extract({
-                    use: ['css-loader'],
-                    // use style-loader in development
-                    fallback: 'style-loader'
-                })
-            },
-
-            {
-                test: /\.scss$/,
-                use: ExtractTextPlugin.extract({
-                    use: ['css-loader', 'sass-loader'],
-                    fallback: 'style-loader'
-                })
             },
 
             {
@@ -73,22 +44,9 @@ module.exports = {
     },
 
     plugins: [
-        new webpack.HotModuleReplacementPlugin(),
-        new webpack.DefinePlugin({
-            'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
-        }),
-        new CleanWebpackPlugin(['build']),
         new HtmlWebpackPlugin({
             title: 'Basic React boilerplate',
             template: './template.html'
-        }),
-        new ExtractTextPlugin({
-            filename: 'style.css'
         })
-    ],
-
-    output: {
-        filename: 'bundle.js',
-        path: path.resolve(__dirname, 'build')
-    }
+    ]
 };

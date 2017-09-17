@@ -29,7 +29,7 @@ When you are ready to deploy to production, create a bundle with `npm run build`
 
 **TODO list:**
 - [ ] add es-lint
-- [ ] add webpack.config.[prod/dev].js
+- [x] add webpack.config.[production/development].js
 - [ ] add css-modules
 - [ ] add tests
 - [ ] add branch with react + mobX
