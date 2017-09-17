@@ -4,8 +4,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
-const ENV = process.env.ENV || "prod";
-
 module.exports = {
     entry: './src/index.js',
 
@@ -13,7 +11,9 @@ module.exports = {
 
     devServer: {
         contentBase: './build',
-        hot: true
+        hot: true,
+        inline: true,
+        open: true
     },
 
     module: {
@@ -75,7 +75,7 @@ module.exports = {
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
         new webpack.DefinePlugin({
-            'ENV': JSON.stringify(ENV),
+            'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
         }),
         new CleanWebpackPlugin(['build']),
         new HtmlWebpackPlugin({

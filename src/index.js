@@ -15,9 +15,11 @@ const render = Component => ReactDOM.render(
 
 render(App);
 
-if (ENV === "dev") {
+if (process.env.NODE_ENV === "development") {
     if (module.hot) {
-        module.hot.accept('./components/App', function () {
+
+        module.hot.accept(module, function () {
+            console.log('I sm try to update something!');
             render(App);
         })
     }

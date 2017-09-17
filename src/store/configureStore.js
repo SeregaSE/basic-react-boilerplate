@@ -3,7 +3,7 @@ import configureStoreForDev from './configureStore.dev';
 
 let configureStore = configureStoreForProd;
 
-if (ENV === "dev") {
+if (process.env.NODE_ENV === "development") {
     configureStore = configureStoreForDev;
 }
 
