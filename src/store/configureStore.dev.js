@@ -11,8 +11,8 @@ const configureStore = () => {
 
     if (module.hot) {
         module.hot.accept(
-            "../reducers",
-            () =>store.replaceReducer(require("../reducers"))
+            '../reducers',
+            () => store.replaceReducer(require('../reducers')), // eslint-disable-line
         );
     }
 

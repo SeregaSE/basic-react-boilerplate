@@ -1,11 +1,25 @@
 import { FETCH_SENTENCES, FETCH_SENTENCES_SUCCESS, FETCH_SENTENCES_ERROR, CLEAR_SENTENCES } from '../constants/sentences';
 
-export const getSentences = () => dispatch => {
+const fetchSentences = () => ({
+    type: FETCH_SENTENCES,
+});
+
+const fetchSentencesSuccess = data => ({
+    type: FETCH_SENTENCES_SUCCESS,
+    data,
+});
+
+const fetchSentencesError = error => ({
+    type: FETCH_SENTENCES_ERROR,
+    error,
+});
+
+export const getSentences = () => (dispatch) => {
     dispatch(fetchSentences());
 
-    const url = "https://baconipsum.com/api/?type=all-meat";
+    const url = 'https://baconipsum.com/api/?type=all-meat';
     const options = {
-        method: "GET"
+        method: 'GET',
     };
 
     fetch(url, options)
@@ -16,18 +30,4 @@ export const getSentences = () => dispatch => {
 
 export const clearSentences = () => ({
     type: CLEAR_SENTENCES,
-});
-
-const fetchSentences = () => ({
-    type: FETCH_SENTENCES
-});
-
-const fetchSentencesSuccess = (data) => ({
-    type: FETCH_SENTENCES_SUCCESS,
-    data
-});
-
-const fetchSentencesError = (error) => ({
-    type: FETCH_SENTENCES_ERROR,
-    error
 });
