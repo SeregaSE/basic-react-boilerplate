@@ -23,7 +23,8 @@ module.exports = {
                     {
                         loader: 'file-loader',
                         options: {
-                            outputPath: './images/'
+                            name: '[hash].[ext]',
+                            outputPath: 'images/',
                         }
                     }
                 ]
@@ -35,7 +36,7 @@ module.exports = {
                     {
                         loader: 'file-loader',
                         options: {
-                            outputPath: './fonts/'
+                            outputPath: 'fonts/'
                         }
                     }
                 ]

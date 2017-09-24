@@ -10,6 +10,7 @@ module.exports = merge(common, {
 
     devServer: {
         contentBase: './build',
+        publicPath: '/',
         hot: true,
         inline: true,
         open: true
@@ -41,12 +42,13 @@ module.exports = merge(common, {
         }),
         new webpack.HotModuleReplacementPlugin(),
         new ExtractTextPlugin({
-            filename: 'style.css'
+            filename: 'css/style.css'
         })
     ],
 
     output: {
         filename: 'bundle.js',
+        publicPath: "/",
         path: path.resolve(__dirname, 'build')
     }
 });

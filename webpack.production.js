@@ -37,12 +37,13 @@ module.exports = merge(common, {
         new CleanWebpackPlugin(['build']),
         new UglifyJSPlugin(),
         new ExtractTextPlugin({
-            filename: 'style_[hash].css'
+            filename: 'css/style_[hash].css'
         })
     ],
 
     output: {
         filename: 'bundle_[hash].js',
+        publicPath: "/",
         path: path.resolve(__dirname, 'build')
     }
 });
