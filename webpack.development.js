@@ -25,6 +25,12 @@ module.exports = merge(common, {
     module: {
         rules: [
             {
+                enforce: "pre",
+                test: /\.js$/,
+                exclude: /(node_modules|bower_components)/,
+                loader: "eslint-loader",
+            },
+            {
                 test: /\.css$/,
                 use: ExtractTextPlugin.extract({
                     use: ['css-loader'],

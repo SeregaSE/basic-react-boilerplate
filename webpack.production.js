@@ -13,6 +13,15 @@ module.exports = merge(common, {
     module: {
         rules: [
             {
+                enforce: "pre",
+                test: /\.js$/,
+                exclude: /(node_modules|bower_components)/,
+                loader: "eslint-loader",
+                options: {
+                    failOnError: true,
+                }
+            },
+            {
                 test: /\.css$/,
                 use: ExtractTextPlugin.extract({
                     filename: 'style_[hash].css',
