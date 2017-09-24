@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import App from './components/App';
+import App from './containers/App';
 import configureStore from './store/configureStore';
 import 'normalize.css';
 import './assets/app.global.css';
@@ -17,8 +17,8 @@ render(App);
 
 if (process.env.NODE_ENV === "development") {
     if (module.hot) {
-        module.hot.accept('./components/App', function () {
-            const NewApp = require('./components/App').default;
+        module.hot.accept('./containers/App', function () {
+            const NewApp = require('./containers/App').default;
             render(NewApp);
         });
     }

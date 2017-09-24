@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getSentences as getSentencesAction, clearSentences as clearSentencesAction } from '../../actions/sentences';
-import Sentence from '../Sentence';
+import Sentence from '../../components/Sentence/Sentence';
 import preloader from '../../assets/images/preloader.svg';
 import './style.scss';
 
