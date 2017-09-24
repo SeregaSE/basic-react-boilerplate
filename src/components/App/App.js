@@ -16,7 +16,7 @@ class App extends Component {
     render() {
         const { sentences, fetching, getSentences, clearSentences } = this.props;
         return (<div className="app">
-            <h3>Random sentences:</h3>
+            <h2>Random sentences:</h2>
             {sentences.length > 0 ? sentences.map((sentence, i) => <Sentence key={`sentence-${i}`} data={sentence}/>)
                 : !fetching && <div className="error"> No available sentences! </div> }
             {fetching ?
@@ -24,8 +24,8 @@ class App extends Component {
                     <img src={preloader} alt="preloader"/>
                 </div> :
                 <div className="button-group">
-                    <button className="button" onClick={getSentences}> Show more</button>
-                    <button className="button" onClick={clearSentences}> Clear all</button>
+                    <button className="button" onClick={getSentences}> Show more </button>
+                    <button className="button" onClick={clearSentences}> Clear all </button>
                 </div>}
         </div>);
     }

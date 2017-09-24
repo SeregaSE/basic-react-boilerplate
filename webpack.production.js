@@ -8,6 +8,8 @@ const common = require('./webpack.common.js');
 
 module.exports = merge(common, {
 
+    entry: './src/index.js',
+
     module: {
         rules: [
             {

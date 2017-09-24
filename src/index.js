@@ -18,8 +18,8 @@ render(App);
 if (process.env.NODE_ENV === "development") {
     if (module.hot) {
         module.hot.accept('./components/App', function () {
-            console.log('I sm try to update something!');
-            render(App);
+            const NewApp = require('./components/App').default;
+            render(NewApp);
         });
     }
 }

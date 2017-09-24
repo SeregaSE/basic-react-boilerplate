@@ -12,9 +12,15 @@ module.exports = merge(common, {
         contentBase: './build',
         publicPath: '/',
         hot: true,
-        inline: true,
         open: true
     },
+
+    entry: [
+        'react-hot-loader/patch',
+        'webpack-dev-server/client?http://localhost:8080',
+        'webpack/hot/only-dev-server',
+        './src/index.js'
+    ],
 
     module: {
         rules: [
@@ -40,10 +46,11 @@ module.exports = merge(common, {
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify("development"),
         }),
-        new webpack.HotModuleReplacementPlugin(),
         new ExtractTextPlugin({
             filename: 'css/style.css'
-        })
+        }),
+        new webpack.HotModuleReplacementPlugin(),
+        new webpack.NamedModulesPlugin(),
     ],
 
     output: {
