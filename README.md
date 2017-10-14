@@ -9,7 +9,7 @@ Made with:
    </a>
 </p>
 
-Boilerplate helps you start writing react-redux apps fast and easy.
+Boilerplate helps you start writing react-redux apps fast and easy. I am trying to make simple tool without lots of libs and dependencies. I hope it will helps students or people who studying frontend development not to dive in deep of javascript mobules and libs.
 
 #### Quick start
 ```sh
