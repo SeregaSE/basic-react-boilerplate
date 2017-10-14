@@ -10,8 +10,8 @@ Made with:
 </p>
 
 #### Description
-Boilerplate helps you start writing react-redux apps fast and easy. I am trying to make simple tool without lots of libs and dependencies. I hope it will helps students or people who studying frontend development not to dive in deep of javascript mobules and libs.
-Build your app with react, redux and webpack. Link your project, build for production, use development tools like HMR, redux-logger.
+Boilerplate helps you start writing react-redux apps fast and easy. I am trying to make simple tool without lots of libs and dependencies. I hope it will helps students or people who studying frontend development not to dive in deep of javascript modules and libs.
+Build your app with react, redux and webpack. Lint your code, easy build for production, use development tools like HMR, redux-logger.
 
 #### Quick start
 ```sh
