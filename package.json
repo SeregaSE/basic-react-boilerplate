@@ -47,7 +47,6 @@
     "webpack-merge": "^4.1.0"
   },
   "dependencies": {
-    "classname": "0.0.0",
     "lodash": "^4.17.4",
     "normalize.css": "^7.0.0",
     "prop-types": "^15.6.0",
