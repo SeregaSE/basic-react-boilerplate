@@ -25,7 +25,7 @@ module.exports = merge(common, {
                 test: /\.css$/,
                 use: ExtractTextPlugin.extract({
                     filename: 'style_[hash].css',
-                    use: ['css-loader'],
+                    use: ['css-loader', 'resolve-url-loader'],
                     fallback: 'style-loader'
                 })
             },
@@ -34,7 +34,7 @@ module.exports = merge(common, {
                 test: /\.scss$/,
                 use: ExtractTextPlugin.extract({
                     filename: 'style_[hash].css',
-                    use: ['css-loader', 'sass-loader'],
+                    use: ['css-loader', 'resolve-url-loader', 'sass-loader?sourceMap'],
                     fallback: 'style-loader'
                 })
             },
