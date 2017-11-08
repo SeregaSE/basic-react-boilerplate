@@ -1,12 +1,19 @@
+// @flow
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getSentences as getSentencesAction, clearSentences as clearSentencesAction } from '../../actions/sentences';
 import Sentence from '../../components/Sentence/Sentence';
 import preloader from '../../assets/images/preloader.svg';
 import './style.scss';
 
-class App extends Component {
+type Props = {
+    sentences?: Array<string>,
+    fetching?: boolean,
+    getSentences: () => void,
+    clearSentences: () => {},
+};
+
+class App extends Component<Props> {
     constructor(props) {
         super(props);
         this.props.getSentences();
@@ -29,13 +36,6 @@ class App extends Component {
         </div>);
     }
 }
-
-App.propTypes = {
-    sentences: PropTypes.arrayOf(PropTypes.string),
-    fetching: PropTypes.bool,
-    getSentences: PropTypes.func.isRequired,
-    clearSentences: PropTypes.func.isRequired,
-};
 
 App.defaultProps = {
     sentences: [],

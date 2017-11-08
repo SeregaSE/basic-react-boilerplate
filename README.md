@@ -29,9 +29,7 @@ When you are ready to deploy to production, create a bundle with `npm run build`
 * [react-redux-router](https://github.com/SeregaSE/basic-react-boilerplate/tree/feature/react-router-redux) - includes react, redux, react-router integrated with redux
 
 **TODO list:**
-- [x] add es-lint
-- [x] add webpack.config.[production/development].js
+- [ ] add css-modules
 - [ ] good example app for demonstration
 - [ ] add tests
 - [ ] add branch with react + mobX
-- [ ] add css-modules
