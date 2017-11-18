@@ -28,6 +28,10 @@ When you are ready to deploy to production, create a bundle with `npm run build`
 * [master](https://github.com/SeregaSE/basic-react-boilerplate) - includes only react and redux
 * [react-redux-router](https://github.com/SeregaSE/basic-react-boilerplate/tree/feature/react-router-redux) - includes react, redux, react-router integrated with redux
 
+#### Hacks
+HMR works bad and reload sometimes. This issue caused when es-lint emit error during reloading. You can disable this in webpack.development.js. Enable eslint emitWarning (it will emit only warning instead errors).
+Change line from ```js emitWarning : false ``` to ```js emitWarning : true ```.
+
 **TODO list:**
 - [x] add es-lint
 - [x] add webpack.config.[production/development].js

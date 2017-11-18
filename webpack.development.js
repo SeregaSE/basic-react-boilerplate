@@ -29,6 +29,9 @@ module.exports = merge(common, {
                 test: /\.js$/,
                 exclude: /(node_modules|bower_components)/,
                 loader: "eslint-loader",
+                options: {
+                    emitWarning : false,
+                },
             },
             {
                 test: /\.css$/,
