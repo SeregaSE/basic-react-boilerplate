@@ -33,9 +33,7 @@ HMR works bad and reload sometimes. This issue caused when es-lint emit error du
 Change line from ```js emitWarning : false ``` to ```js emitWarning : true ```.
 
 **TODO list:**
-- [x] add es-lint
-- [x] add webpack.config.[production/development].js
+- [ ] add css-modules
 - [ ] good example app for demonstration
 - [ ] add tests
 - [ ] add branch with react + mobX
-- [ ] add css-modules

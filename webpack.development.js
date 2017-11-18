@@ -12,20 +12,20 @@ module.exports = merge(common, {
         contentBase: './build',
         publicPath: '/',
         hot: true,
-        open: true
+        open: true,
     },
 
     entry: [
         'react-hot-loader/patch',
         'webpack-dev-server/client?http://localhost:8080',
         'webpack/hot/only-dev-server',
-        './src/index.js'
+        './src/index.js',
     ],
 
     module: {
         rules: [
             {
-                enforce: "pre",
+                enforce: 'pre',
                 test: /\.js$/,
                 exclude: /(node_modules|bower_components)/,
                 loader: "eslint-loader",
@@ -37,26 +37,26 @@ module.exports = merge(common, {
                 test: /\.css$/,
                 use: ExtractTextPlugin.extract({
                     use: ['css-loader', 'resolve-url-loader'],
-                    fallback: 'style-loader'
-                })
+                    fallback: 'style-loader',
+                }),
             },
 
             {
                 test: /\.scss$/,
                 use: ExtractTextPlugin.extract({
                     use: ['css-loader', 'resolve-url-loader', 'sass-loader?sourceMap'],
-                    fallback: 'style-loader'
-                })
+                    fallback: 'style-loader',
+                }),
             },
-        ]
+        ],
     },
 
     plugins: [
         new webpack.DefinePlugin({
-            'process.env.NODE_ENV': JSON.stringify("development"),
+            'process.env.NODE_ENV': JSON.stringify('development'),
         }),
         new ExtractTextPlugin({
-            filename: 'css/style.css'
+            filename: 'css/style.css',
         }),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NamedModulesPlugin(),
@@ -64,7 +64,7 @@ module.exports = merge(common, {
 
     output: {
         filename: 'bundle.js',
-        publicPath: "/",
-        path: path.resolve(__dirname, 'build')
-    }
+        publicPath: '/',
+        path: path.resolve(__dirname, 'build'),
+    },
 });

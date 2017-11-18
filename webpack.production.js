@@ -13,21 +13,21 @@ module.exports = merge(common, {
     module: {
         rules: [
             {
-                enforce: "pre",
+                enforce: 'pre',
                 test: /\.js$/,
                 exclude: /(node_modules|bower_components)/,
-                loader: "eslint-loader",
+                loader: 'eslint-loader',
                 options: {
                     failOnError: true,
-                }
+                },
             },
             {
                 test: /\.css$/,
                 use: ExtractTextPlugin.extract({
                     filename: 'style_[hash].css',
                     use: ['css-loader', 'resolve-url-loader'],
-                    fallback: 'style-loader'
-                })
+                    fallback: 'style-loader',
+                }),
             },
 
             {
@@ -35,26 +35,26 @@ module.exports = merge(common, {
                 use: ExtractTextPlugin.extract({
                     filename: 'style_[hash].css',
                     use: ['css-loader', 'resolve-url-loader', 'sass-loader?sourceMap'],
-                    fallback: 'style-loader'
-                })
+                    fallback: 'style-loader',
+                }),
             },
-        ]
+        ],
     },
 
     plugins: [
         new webpack.DefinePlugin({
-            'process.env.NODE_ENV': JSON.stringify("production"),
+            'process.env.NODE_ENV': JSON.stringify('production'),
         }),
         new CleanWebpackPlugin(['build']),
         new UglifyJSPlugin(),
         new ExtractTextPlugin({
-            filename: 'css/style_[hash].css'
-        })
+            filename: 'css/style_[hash].css',
+        }),
     ],
 
     output: {
         filename: 'bundle_[hash].js',
-        publicPath: "/",
-        path: path.resolve(__dirname, 'build')
-    }
+        publicPath: '/',
+        path: path.resolve(__dirname, 'build'),
+    },
 });

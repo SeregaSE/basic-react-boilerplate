@@ -1,4 +1,3 @@
-const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -11,9 +10,9 @@ module.exports = {
                 use: {
                     loader: 'babel-loader',
                     options: {
-                        presets: ['env', 'react', 'stage-2']
-                    }
-                }
+                        presets: ['env', 'react', 'stage-2', 'flow'],
+                    },
+                },
             },
 
             {
@@ -24,9 +23,9 @@ module.exports = {
                         options: {
                             name: '[hash].[ext]',
                             outputPath: 'images/',
-                        }
-                    }
-                ]
+                        },
+                    },
+                ],
             },
 
             {
@@ -35,18 +34,18 @@ module.exports = {
                     {
                         loader: 'file-loader',
                         options: {
-                            outputPath: 'fonts/'
-                        }
-                    }
-                ]
-            }
-        ]
+                            outputPath: 'fonts/',
+                        },
+                    },
+                ],
+            },
+        ],
     },
 
     plugins: [
         new HtmlWebpackPlugin({
             title: 'Basic React boilerplate',
-            template: './template.html'
-        })
-    ]
+            template: './template.html',
+        }),
+    ],
 };
