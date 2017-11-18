@@ -30,7 +30,7 @@ When you are ready to deploy to production, create a bundle with `npm run build`
 
 #### Hacks
 HMR works bad and reload sometimes. This issue caused when es-lint emit error during reloading. You can disable this in webpack.development.js. Enable eslint emitWarning (it will emit only warning instead errors).
-Change line from ```js emitWarning : false ``` to ```js emitWarning : true ```.
+Change line from ```emitWarning : false ``` to ```emitWarning : true ```.
 
 **TODO list:**
 - [ ] add css-modules
