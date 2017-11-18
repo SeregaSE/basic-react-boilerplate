@@ -35,18 +35,12 @@ module.exports = merge(common, {
             },
             {
                 test: /\.css$/,
-                use: ExtractTextPlugin.extract({
-                    use: ['css-loader', 'resolve-url-loader'],
-                    fallback: 'style-loader',
-                }),
+                use: ['style-loader', 'css-loader', 'resolve-url-loader'],
             },
 
             {
                 test: /\.scss$/,
-                use: ExtractTextPlugin.extract({
-                    use: ['css-loader', 'resolve-url-loader', 'sass-loader?sourceMap'],
-                    fallback: 'style-loader',
-                }),
+                use: ['style-loader', 'css-loader', 'resolve-url-loader', 'sass-loader?sourceMap']
             },
         ],
     },
