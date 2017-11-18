@@ -1,7 +1,7 @@
 {
-  "name": "webpackguide",
+  "name": "basic-react-boilerplate",
   "version": "1.0.0",
-  "description": "studying webpack by docs and guides",
+  "description": "basic-react-boilerplate for fast start with front end development",
   "main": "index.js",
   "scripts": {
     "build": "webpack --config webpack.production.js -p",
