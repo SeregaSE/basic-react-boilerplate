@@ -28,19 +28,28 @@ module.exports = merge(common, {
                 enforce: 'pre',
                 test: /\.js$/,
                 exclude: /(node_modules|bower_components)/,
-                loader: "eslint-loader",
+                loader: 'eslint-loader',
                 options: {
-                    emitWarning : false,
+                    emitWarning: false,
                 },
             },
             {
                 test: /\.css$/,
-                use: ['style-loader', 'css-loader', 'resolve-url-loader'],
+                use: [
+                    'style-loader',
+                    'css-loader?modules&localIdentName=[name]__[local]___[hash:base64:5]',
+                    'resolve-url-loader',
+                ],
             },
 
             {
                 test: /\.scss$/,
-                use: ['style-loader', 'css-loader', 'resolve-url-loader', 'sass-loader?sourceMap']
+                use: [
+                    'style-loader',
+                    'css-loader?modules&localIdentName=[name]__[local]___[hash:base64:5]',
+                    'resolve-url-loader',
+                    'sass-loader?sourceMap',
+                ],
             },
         ],
     },

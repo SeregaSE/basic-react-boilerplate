@@ -1,12 +1,12 @@
 // @flow
 import React from 'react';
-import './style.scss';
+import style from './style.scss';
 
 type Props = {
     data?: string,
 };
 
-const Sentence = ({ data }: Props) => (<p className="sentence">
+const Sentence = ({ data }: Props) => (<p className={style.sentence}>
     {data}
 </p>);
 
