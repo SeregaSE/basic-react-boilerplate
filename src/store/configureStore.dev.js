@@ -1,10 +1,13 @@
 import { createStore, applyMiddleware } from 'redux';
+import createSagaMiddleware from 'redux-saga';
 import thunk from 'redux-thunk';
 import logger from 'redux-logger';
 import { composeWithDevTools } from 'redux-devtools-extension';
+import rootSaga from '../sagas';
 import reducer from '../reducers';
 
-const middleware = [logger, thunk];
+const sagaMiddleware = createSagaMiddleware();
+const middleware = [logger, thunk, sagaMiddleware];
 
 const configureStore = () => {
     const store = createStore(reducer, composeWithDevTools(applyMiddleware(...middleware)));
@@ -15,6 +18,8 @@ const configureStore = () => {
             () => store.replaceReducer(require('../reducers')), // eslint-disable-line
         );
     }
+
+    sagaMiddleware.run(rootSaga);
 
     return store;
 };
