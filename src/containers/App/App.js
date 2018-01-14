@@ -1,7 +1,7 @@
 // @flow
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { getSentences as getSentencesAction, clearSentences as clearSentencesAction } from '../../actions/sentences';
+import { fetchSentences as getSentencesAction, clearSentences as clearSentencesAction } from '../../actions/sentences';
 import Sentence from '../../components/Sentence/Sentence';
 import loader from '../../assets/images/loader.svg';
 import style from './style.scss';
