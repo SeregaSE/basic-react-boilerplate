@@ -15,12 +15,21 @@ module.exports = merge(common, {
         open: true,
     },
 
-    entry: [
-        'react-hot-loader/patch',
-        'webpack-dev-server/client?http://localhost:8080',
-        'webpack/hot/only-dev-server',
-        './src/index.js',
-    ],
+    entry: {
+        vendors: [
+            'react',
+            'react-dom',
+            'react-redux',
+            'redux',
+            'redux-saga',
+        ],
+        bundle: [
+            'react-hot-loader/patch',
+            'webpack-dev-server/client?http://localhost:8080',
+            'webpack/hot/only-dev-server',
+            './src/index.js',
+        ],
+    },
 
     module: {
         rules: [
@@ -58,6 +67,13 @@ module.exports = merge(common, {
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify('development'),
         }),
+        new webpack.optimize.CommonsChunkPlugin({
+            name: 'vendors',
+            minChunks: Infinity,
+        }),
+        new webpack.optimize.CommonsChunkPlugin({
+            name: 'manifest',
+        }),
         new ExtractTextPlugin({
             filename: 'css/style.css',
         }),
@@ -66,7 +82,7 @@ module.exports = merge(common, {
     ],
 
     output: {
-        filename: 'bundle.js',
+        filename: '[name].js',
         publicPath: '/',
         path: path.resolve(__dirname, 'build'),
     },

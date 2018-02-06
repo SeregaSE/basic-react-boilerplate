@@ -8,7 +8,16 @@ const common = require('./webpack.common.js');
 
 module.exports = merge(common, {
 
-    entry: './src/index.js',
+    entry: {
+        vendors: [
+            'react',
+            'react-dom',
+            'react-redux',
+            'redux',
+            'redux-saga',
+        ],
+        bundle: './src/index.js',
+    },
 
     module: {
         rules: [
@@ -53,6 +62,13 @@ module.exports = merge(common, {
             'process.env.NODE_ENV': JSON.stringify('production'),
         }),
         new CleanWebpackPlugin(['build']),
+        new webpack.optimize.CommonsChunkPlugin({
+            name: 'vendors',
+            minChunks: Infinity,
+        }),
+        new webpack.optimize.CommonsChunkPlugin({
+            name: 'manifest',
+        }),
         new UglifyJSPlugin(),
         new ExtractTextPlugin({
             filename: 'css/style_[hash].css',
@@ -60,7 +76,7 @@ module.exports = merge(common, {
     ],
 
     output: {
-        filename: 'bundle_[hash].js',
+        filename: '[name].[chunkhash].js',
         publicPath: '/',
         path: path.resolve(__dirname, 'build'),
     },
