@@ -2,18 +2,24 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchSentences as getSentencesAction, clearSentences as clearSentencesAction } from '../../actions/sentences';
-import Sentence from '../../components/Sentence/Sentence';
-import loader from '../../assets/images/loader.svg';
-import style from './style.scss';
+import { Button, Row, Error, Header, Loader, Sentence } from '../../components';
+import style from './style.css';
+
+const ButtonGroup = Button.Group;
 
 type Props = {
-    sentences?: Array<string>,
+    sentences: Array<string>,
     fetching?: boolean,
     getSentences: () => void,
-    clearSentences: () => {},
+    clearSentences: () => void,
 };
 
 class App extends Component<Props> {
+    static defaultProps = {
+        sentences: [],
+        fetching: false,
+    };
+
     constructor(props) {
         super(props);
         this.props.getSentences();
@@ -22,25 +28,22 @@ class App extends Component<Props> {
     render() {
         const { sentences, fetching, getSentences, clearSentences } = this.props;
         return (<div className={style.app}>
-            <h2>Random sentences:</h2>
-            {sentences.length > 0 ? sentences.map(sentence => <Sentence key={`sentence-${Math.random()}`} data={sentence} />)
-                : !fetching && <div className={style.error}> No available sentences! </div> }
-            {fetching ?
-                <div className={style.loader}>
-                    <img src={loader} alt="loading..." />
-                </div> :
-                <div className={style.buttonGroup}>
-                    <button className={style.button} onClick={getSentences}> Show more </button>
-                    <button className={style.button} onClick={clearSentences}> Clear all </button>
-                </div>}
+            <Header>Random sentences:</Header>
+
+            {sentences.map(sentence => <Sentence key={`sentence-${Math.random()}`} data={sentence} />)}
+
+            {sentences.length === 0 && !fetching && <Row justify="center">
+                <Error> No available sentences! </Error>
+            </Row>}
+
+            {fetching ? <Row justify="center"><Loader /></Row> : <ButtonGroup>
+                <Button onClick={getSentences}>{sentences.length === 0 ? 'Load' : 'More' }</Button>
+                {sentences.length > 0 ? <Button onClick={clearSentences}>Clear</Button> : null}
+            </ButtonGroup>}
+
         </div>);
     }
 }
-
-App.defaultProps = {
-    sentences: [],
-    fetching: false,
-};
 
 const mapStateToProps = state => ({
     sentences: state.sentences.data,

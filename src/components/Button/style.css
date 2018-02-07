@@ -1,0 +1,27 @@
+.button {
+    padding: 12px 30px;
+    border: 1px solid var(--dark-grey);
+    box-sizing: border-box;
+    background-color: var(--white);
+    font-size: 12px;
+    cursor: pointer;
+    outline: none;
+    transition: .25s all;
+}
+
+.button:hover {
+    background-color: var(--dark-grey);
+    color: var(--white);
+}
+
+.group {
+    display: flex;
+}
+
+.group > .button {
+    margin-right: 25px;
+}
+
+.group > .button:last-of-type {
+    margin-right: 0;
+}

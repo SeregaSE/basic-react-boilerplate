@@ -1,6 +1,6 @@
 // @flow
 import React from 'react';
-import style from './style.scss';
+import style from './style.css';
 
 type Props = {
     data?: string,

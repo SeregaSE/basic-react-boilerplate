@@ -4,7 +4,8 @@ import { Provider } from 'react-redux';
 import App from './containers/App';
 import configureStore from './store/configureStore';
 import 'normalize.css'; // eslint-disable-line
-import './assets/app.global.scss';
+import './assets/variables.css';
+import './assets/app.global.css';
 
 const root = document.getElementById('root');
 const store = configureStore();
@@ -18,7 +19,8 @@ render(App);
 if (process.env.NODE_ENV === 'development') {
     if (module.hot) {
         module.hot.accept('./containers/App', () => {
-            require('./assets/app.global.scss'); // eslint-disable-line
+            require('./assets/app.global.css'); // eslint-disable-line
+            require('./assets/variables.css'); // eslint-disable-line
             const NewApp = require('./containers/App').default; // eslint-disable-line
             render(NewApp);
         });

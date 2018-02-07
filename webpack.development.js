@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const merge = require('webpack-merge');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const FlowWebpackPlugin = require('flow-webpack-plugin');
 const common = require('./webpack.common.js');
 
 module.exports = merge(common, {
@@ -78,6 +79,9 @@ module.exports = merge(common, {
             filename: 'css/style.css',
         }),
         new webpack.HotModuleReplacementPlugin(),
+        new FlowWebpackPlugin({
+            verbose: true,
+        }),
         new webpack.NamedModulesPlugin(),
     ],
 

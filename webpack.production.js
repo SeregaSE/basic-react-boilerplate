@@ -4,6 +4,7 @@ const merge = require('webpack-merge');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const FlowWebpackPlugin = require('flow-webpack-plugin');
 const common = require('./webpack.common.js');
 
 module.exports = merge(common, {
@@ -70,6 +71,9 @@ module.exports = merge(common, {
             name: 'manifest',
         }),
         new UglifyJSPlugin(),
+        new FlowWebpackPlugin({
+            failOnError: true,
+        }),
         new ExtractTextPlugin({
             filename: 'css/style_[hash].css',
         }),
