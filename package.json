@@ -7,7 +7,7 @@
     "build": "webpack --config webpack.production.js -p",
     "dev": "webpack-dev-server --config webpack.development.js",
     "lint": "eslint ./src --fix",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "keywords": [
     "webpack",
@@ -21,6 +21,7 @@
   "devDependencies": {
     "babel-core": "^6.25.0",
     "babel-eslint": "^8.0.2",
+    "babel-jest": "^22.2.0",
     "babel-loader": "^7.1.1",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.6.0",
@@ -41,9 +42,11 @@
     "flow-bin": "^0.65.0",
     "flow-webpack-plugin": "^1.2.0",
     "html-webpack-plugin": "^2.29.0",
+    "jest": "^22.2.1",
     "node-sass": "^4.5.3",
     "react-hot-loader": "^3.0.0",
     "redux-devtools-extension": "^2.13.2",
+    "regenerator-runtime": "^0.11.1",
     "resolve-url-loader": "^2.1.1",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",

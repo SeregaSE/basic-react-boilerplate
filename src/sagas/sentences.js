@@ -1,18 +1,14 @@
-import { takeEvery, put } from 'redux-saga/effects';
+import { takeEvery, put, call } from 'redux-saga/effects';
+import api from '../services/api';
 import { FETCH_SENTENCES } from '../constants/sentences';
 import {
     fetchSentencesError,
     fetchSentencesSuccess,
 } from '../actions/sentences';
 
-function* fetchSentencesFlow() {
-    const url = 'https://baconipsum.com/api/?type=all-meat';
-    const options = {
-        method: 'GET',
-    };
+export function* fetchSentencesFlow() {
     try {
-        const response = yield fetch(url, options);
-        const data = yield response.json();
+        const data = yield call(api.fetchSentences);
         yield put(fetchSentencesSuccess(data));
     } catch (error) {
         yield put(fetchSentencesError(error));
