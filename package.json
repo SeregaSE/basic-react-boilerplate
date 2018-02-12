@@ -10,11 +10,13 @@
     "test": "jest"
   },
   "keywords": [
-    "webpack",
     "js",
-    "react",
+    "es6",
     "boilerplate",
-    "react-redux"
+    "react",
+    "redux",
+    "react-saga",
+    "webpack",
   ],
   "author": "Sergeev Sergey",
   "license": "ISC",

@@ -24,7 +24,7 @@ test('Fetch sentences flow', () => {
     expect(flow.next().value).toEqual(call(api.fetchSentences));
     const successFlow = flow.clone();
     const failureFlow = flow.clone();
-    expect(successFlow.next(response).value).toEqual(put(fetchSentencesSuccess(response)));
+    expect(successFlow.next(1).value).toEqual(put(fetchSentencesSuccess(response)));
     expect(failureFlow.throw(error).value).toEqual(put(fetchSentencesError(error)));
 });
 
