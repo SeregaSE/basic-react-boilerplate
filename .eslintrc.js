@@ -9,7 +9,8 @@ module.exports = {
     ],
     'env': {
         'browser': true,
-        'node': true
+        'node': true,
+        'jest': true,
     },
     'rules': {
         'indent': [1, 4],

@@ -6,6 +6,7 @@
   "scripts": {
     "build": "webpack --config webpack.production.js -p",
     "dev": "webpack-dev-server --config webpack.development.js",
+    "prepare": "ln -s -f ../../hooks/.pre-commit.sh .git/hooks/pre-commit",
     "lint": "eslint ./src --fix",
     "test": "jest"
   },
@@ -16,7 +17,7 @@
     "react",
     "redux",
     "react-saga",
-    "webpack",
+    "webpack"
   ],
   "author": "Sergeev Sergey",
   "license": "ISC",
