@@ -10,7 +10,7 @@ module.exports = {
                 use: {
                     loader: 'babel-loader',
                     options: {
-                        presets: ['env', 'react', 'stage-2', 'flow'],
+                        presets: ['env', 'react', 'stage-2'],
                         plugins: ['transform-runtime'],
                     },
                 },

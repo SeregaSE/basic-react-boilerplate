@@ -1,4 +1,3 @@
-// @flow
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchSentences as getSentencesAction, clearSentences as clearSentencesAction } from '../../actions/sentences';
@@ -7,14 +6,7 @@ import style from './style.css';
 
 const ButtonGroup = Button.Group;
 
-type Props = {
-    sentences: Array<string>,
-    fetching?: boolean,
-    getSentences: () => void,
-    clearSentences: () => void,
-};
-
-class App extends Component<Props> {
+class App extends Component {
     static defaultProps = {
         sentences: [],
         fetching: false,

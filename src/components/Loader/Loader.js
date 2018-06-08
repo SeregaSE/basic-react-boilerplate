@@ -1,4 +1,3 @@
-// @flow
 import React from 'react';
 import style from './style.css';
 import loader from '../../assets/images/loader.svg';

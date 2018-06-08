@@ -1,11 +1,11 @@
 const path = require('path');
 const webpack = require('webpack');
 const merge = require('webpack-merge');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const FlowWebpackPlugin = require('flow-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const common = require('./webpack.common.js');
 
 module.exports = merge(common, {
+    mode: 'development',
 
     devtool: 'inline-source-map',
 
@@ -17,13 +17,6 @@ module.exports = merge(common, {
     },
 
     entry: {
-        vendors: [
-            'react',
-            'react-dom',
-            'react-redux',
-            'redux',
-            'redux-saga',
-        ],
         bundle: [
             'react-hot-loader/patch',
             'webpack-dev-server/client?http://localhost:8080',
@@ -65,24 +58,10 @@ module.exports = merge(common, {
     },
 
     plugins: [
-        new webpack.DefinePlugin({
-            'process.env.NODE_ENV': JSON.stringify('development'),
-        }),
-        new webpack.optimize.CommonsChunkPlugin({
-            name: 'vendors',
-            minChunks: Infinity,
-        }),
-        new webpack.optimize.CommonsChunkPlugin({
-            name: 'manifest',
-        }),
-        new ExtractTextPlugin({
+        new MiniCssExtractPlugin({
             filename: 'css/style.css',
         }),
         new webpack.HotModuleReplacementPlugin(),
-        new FlowWebpackPlugin({
-            verbose: true,
-        }),
-        new webpack.NamedModulesPlugin(),
     ],
 
     output: {
