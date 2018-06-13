@@ -1,27 +1,32 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import App from './containers/App';
+import { ThemeProvider } from 'styled-components';
+import App from './containers/AppContainer';
 import configureStore from './store/configureStore';
-import 'normalize.css'; // eslint-disable-line
-import './assets/variables.css';
-import './assets/app.global.css';
+import theme from './theme';
+// eslint-disable-next-line
+import 'normalize.css';
 
 const root = document.getElementById('root');
 const store = configureStore();
-const render = Component => ReactDOM.render( // eslint-disable-line
+
+
+// eslint-disable-next-line
+const render = Component => ReactDOM.render(
     <Provider store={store}>
-        <Component />
+        <ThemeProvider theme={theme}>
+            <Component />
+        </ThemeProvider>
     </Provider>, root);
 
 render(App);
 
 if (process.env.NODE_ENV === 'development') {
     if (module.hot) {
-        module.hot.accept('./containers/App', () => {
-            require('./assets/app.global.css'); // eslint-disable-line
-            require('./assets/variables.css'); // eslint-disable-line
-            const NewApp = require('./containers/App').default; // eslint-disable-line
+        module.hot.accept('./containers/AppContainer', () => {
+            // eslint-disable-next-line
+            const NewApp = require('./containers/AppContainer').default;
             render(NewApp);
         });
     }

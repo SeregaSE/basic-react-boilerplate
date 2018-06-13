@@ -19,7 +19,7 @@ module.exports = merge(common, {
     entry: {
         bundle: [
             'react-hot-loader/patch',
-            'webpack-dev-server/client?http://localhost:8080',
+            'webpack-dev-server/client?http://localhost:8081',
             'webpack/hot/only-dev-server',
             './src/index.js',
         ],
@@ -40,7 +40,7 @@ module.exports = merge(common, {
                 test: /\.css$/,
                 use: [
                     'style-loader',
-                    'css-loader?modules&localIdentName=[name]__[local]___[hash:base64:5]',
+                    'css-loader',
                     'resolve-url-loader',
                 ],
             },
@@ -49,7 +49,7 @@ module.exports = merge(common, {
                 test: /\.scss$/,
                 use: [
                     'style-loader',
-                    'css-loader?modules&localIdentName=[name]__[local]___[hash:base64:5]',
+                    'css-loader',
                     'resolve-url-loader',
                     'sass-loader?sourceMap',
                 ],

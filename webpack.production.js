@@ -13,20 +13,20 @@ module.exports = merge(common, {
 
     module: {
         rules: [
-            // {
-            //     enforce: 'pre',
-            //     test: /\.js$/,
-            //     exclude: /(node_modules|bower_components)/,
-            //     loader: 'eslint-loader',
-            //     options: {
-            //         failOnError: false,
-            //     },
-            // },
+            {
+                enforce: 'pre',
+                test: /\.js$/,
+                exclude: /(node_modules|bower_components)/,
+                loader: 'eslint-loader',
+                options: {
+                    failOnError: false,
+                },
+            },
             {
                 test: /\.css$/,
                 use: [
                     MiniCssExtractPlugin.loader,
-                    'css-loader?modules&localIdentName=[hash:base64:5]',
+                    'css-loader',
                     'resolve-url-loader',
                 ],
             },
@@ -35,7 +35,7 @@ module.exports = merge(common, {
                 test: /\.scss$/,
                 use: [
                     MiniCssExtractPlugin.loader,
-                    'css-loader?modules&localIdentName=[hash:base64:5]',
+                    'css-loader',
                     'resolve-url-loader',
                     'sass-loader?sourceMap',
                 ],

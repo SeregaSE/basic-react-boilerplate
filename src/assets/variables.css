@@ -1,9 +1,0 @@
-:global(:root) {
-    --red: #730f29;
-    --grey: #b4b4b4;
-    --dark-grey: #282828;
-    --light-grey: #f7f7f7;
-    --white: #fff;
-
-    --shadow: 0 0 3px 1px rgba(220, 220, 220, .6);
-}

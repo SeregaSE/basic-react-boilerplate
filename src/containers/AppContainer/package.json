@@ -1,0 +1,5 @@
+{
+  "name": "AppContainer",
+  "version": "0.0.1",
+  "main": "./AppContainer.js"
+}

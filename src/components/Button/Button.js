@@ -1,17 +1,25 @@
-import * as React from 'react';
-import style from './style.css';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
-const Button = ({ children, onClick }) => (<button
-    className={style.button}
-    onClick={onClick}
->
-    {children}
-</button>);
+const Button = styled.button`
+    padding: 12px 30px;
+    border: 1px solid ${props => props.theme.dark};
+    box-sizing: border-box;
+    background-color: ${props => props.theme.base};
+    font-size: 12px;
+    cursor: pointer;
+    outline: none;
+    transition: .3s all;
+    
+    &:hover {
+      background-color: ${props => props.theme.dark};
+      color: ${props => props.theme.base};
+    }
+`;
 
-const Group = ({ children }) => (<div className={style.group}>
-    {children}
-</div>);
-
-Button.Group = Group;
+Button.propTypes = {
+    children: PropTypes.node,
+    onClick: PropTypes.func,
+};
 
 export default Button;
