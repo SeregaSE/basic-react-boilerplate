@@ -9,6 +9,8 @@ import Container from '../Container';
 import Loader from '../Loader';
 import Sentence from '../Sentence';
 import Title from '../Title';
+import robotoLight from '../../assets/fonts/Roboto-Light.ttf';
+import robotoThin from '../../assets/fonts/Roboto-Thin.ttf';
 
 // eslint-disable-next-line
 injectGlobal`
@@ -16,20 +18,20 @@ injectGlobal`
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 200;
-    src: url('../../assets/fonts/Roboto-Light.ttf') format('truetype');
+    src: url('${robotoLight}') format('truetype');
 }
 
 @font-face {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 100;
-    src: url('../../assets/fonts/Roboto-Thin.ttf') format('truetype');
+    src: url('${robotoThin}') format('truetype');
 }
 
   body {
     padding: 0 15px 15px;
     font-family: Roboto, sans-serif;
-    font-weight: 200;
+    font-weight: 100;
     font-size: 16px;
     color: ${theme.main};
   }
