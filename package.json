@@ -9,7 +9,7 @@
     "prepare": "ln -s -f ../../hooks/.pre-commit.sh .git/hooks/pre-commit",
     "lint": "eslint ./src --fix",
     "test": "jest --passWithNoTests",
-    "precommit": "npm test"
+    "precommit": "npm run lint && npm test"
   },
   "keywords": [
     "js",
