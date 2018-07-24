@@ -8,7 +8,8 @@
     "dev": "webpack-dev-server --config webpack.development.js",
     "prepare": "ln -s -f ../../hooks/.pre-commit.sh .git/hooks/pre-commit",
     "lint": "eslint ./src --fix",
-    "test": "jest"
+    "test": "jest",
+    "precommit": "npm test"
   },
   "keywords": [
     "js",
@@ -66,10 +67,5 @@
     "redux": "^4.0.0",
     "redux-saga": "^0.16.0",
     "styled-components": "^3.3.2"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm test"
-    }
   }
 }
