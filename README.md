@@ -18,7 +18,7 @@ Build your app with react, redux and webpack. Use styled components. Lint your c
 git clone https://github.com/SeregaSE/basic-react-boilerplate.git my-app
 cd my-app
 npm install
-npm run dev
+npm start
 ```
 By default go to [http://localhost:8080/](http://localhost:8080/) at your browser for example.
 ![alt text](https://github.com/SeregaSE/basic-react-boilerplate/blob/master/docs/img/example.png "Example app screenshot")
