@@ -1,9 +1,9 @@
-import { all, call } from 'redux-saga/effects';
-import sentencesSaga from './sentences';
+import { all, fork } from 'redux-saga/effects';
+import fetchListings from './fetchListings';
 
 function* rootSaga() {
     yield all([
-        call(sentencesSaga),
+        fork(fetchListings),
     ]);
 }
 

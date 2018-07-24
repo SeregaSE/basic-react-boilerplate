@@ -1,16 +1,23 @@
 const config = {
-    url: 'https://baconipsum.com/api/?type=all-meat',
+    url: 'https://api.coinmarketcap.com',
+    version: 'v2',
 };
 
-const fetchSentences = () => new Promise((resolve, reject) => {
-    fetch(config.url, {
-        method: 'GET',
-    })
-        .then(res => res.json())
-        .then(data => resolve(data))
-        .catch(error => reject(error));
-});
+class CoinMarketCap {
+    constructor(url, version) {
+        this.url = `${url}/${version}`;
+    }
 
-export default {
-    fetchSentences,
-};
+    getListings() {
+        return new Promise((resolve, reject) => {
+            fetch(`${this.url}/listings/`)
+                .then(response => response.json())
+                .then(listing => resolve(listing))
+                .catch(error => reject(error));
+        });
+    }
+}
+
+const CoinMarketCapService = new CoinMarketCap(config.url, config.version);
+
+export default CoinMarketCapService;

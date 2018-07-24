@@ -1,7 +1,7 @@
-const fetchSentences = () => new Promise((resolve) => {
+const noopAsync = () => new Promise((resolve) => {
     resolve([]);
 });
 
 export default {
-    fetchSentences,
+    getListings: noopAsync,
 };

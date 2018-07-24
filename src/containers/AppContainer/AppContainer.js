@@ -1,15 +1,21 @@
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import App from '../../components/App';
-import { fetchSentences as getSentencesAction, clearSentences as clearSentencesAction } from '../../actions/sentences';
+import { currencies } from '../../actions';
+import {
+    selectCurrencies,
+    selectCurrenciesFetching,
+    selectCurrenciesFetchingErrors,
+} from '../../selectors';
 
 const mapStateToProps = state => ({
-    sentences: state.sentences.data,
-    fetching: state.sentences.fetching,
+    currencies: selectCurrencies(state),
+    fetching: selectCurrenciesFetching(state),
+    errors: selectCurrenciesFetchingErrors(state),
 });
 
 const mapDispatchToProps = dispatch => ({
-    getSentences: () => dispatch(getSentencesAction()),
-    clearSentences: () => dispatch(clearSentencesAction()),
+    actions: bindActionCreators({ fetchCurrencies: currencies.fetchCurrencies }, dispatch),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

@@ -1,6 +1,8 @@
 import { combineReducers } from 'redux';
-import sentences from './sentences';
+import currencies from './currencies';
+import network from './network';
 
 export default combineReducers({
-    sentences,
+    currencies,
+    network,
 });

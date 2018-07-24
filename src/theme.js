@@ -1,6 +1,10 @@
 export default {
-    base: '#FAF1EA',
-    main: '#AD8F73',
-    dark: '#3E4854',
-    danger: '#fb3827',
+    darkPrimary: '#303F9F', // background
+    defaultPrimary: '#3F51B5', // background
+    lightPrimary: '#C5CAE9', // background
+    textPrimary: '#FFFFFF', // color
+    accent: '#536DFE', // background
+    primaryText: '#212121', // color
+    secondaryText: '#757575', // color
+    divider: '#BDBDBD', // border-color
 };
