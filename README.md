@@ -11,7 +11,7 @@ Made with:
 
 #### Description
 Boilerplate helps you start writing react-redux apps fast and easy. I am trying to make simple tool without lots of libs and dependencies. I hope it will helps students or people who studying frontend development not to dive in deep of javascript modules and libs.
-Build your app with react, redux and webpack. Use css modules. Lint your code, easy build for production, use development tools like HMR, redux-logger, redux dev tools.
+Build your app with react, redux and webpack. Use styled components. Lint your code, easy build for production, use development tools like HMR, redux-logger, redux dev tools.
 
 #### Quick start
 ```sh
@@ -27,11 +27,3 @@ When you are ready to deploy to production, create a bundle with `npm run build`
 **Branches:**
 * [master](https://github.com/SeregaSE/basic-react-boilerplate) - includes only react and redux
 * [react-redux-router](https://github.com/SeregaSE/basic-react-boilerplate/tree/feature/react-router-redux) - includes react, redux, react-router integrated with redux
-
-#### Hacks
-HMR works bad and reload sometimes. This issue caused when es-lint emit error during reloading. You can disable this in webpack.development.js. Enable eslint emitWarning (it will emit only warning instead errors).
-Change line from ```emitWarning : false ``` to ```emitWarning : true ```.
-
-**TODO list:**
-- [ ] good example app for demonstration
-- [ ] add tests

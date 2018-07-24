@@ -1,13 +1,7 @@
-import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { injectGlobal } from 'styled-components';
 import theme from '../../theme';
-import Header from '../Bar';
-import Loader from '../Loader';
-import CurrencyList from '../CurrencyList';
-import Title from '../Title';
 import robotoLight from '../../assets/fonts/Roboto-Light.ttf';
-import robotoThin from '../../assets/fonts/Roboto-Thin.ttf';
 import MaterialIcons from '../../assets/fonts/MaterialIcons-Regular.ttf';
 
 // eslint-disable-next-line
@@ -17,13 +11,6 @@ injectGlobal`
         font-style: normal;
         font-weight: 300;
         src: url('${robotoLight}') format('truetype');
-    }
-    
-    @font-face {
-        font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 100;
-        src: url('${robotoThin}') format('truetype');
     }
     
     @font-face {
@@ -59,11 +46,16 @@ injectGlobal`
     }
     
     body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         font-family: Roboto, sans-serif;
-        font-weight: 300;
-        font-size: 16px;
-        color: ${theme.main};
-        background: ${theme.base};
+        font-weight: 100;
+        font-size: 24px;
+        color: ${theme.onPrimary};
+        background: ${theme.primary};
     }
       
     div, header {
@@ -71,34 +63,7 @@ injectGlobal`
     }
 `;
 
-class App extends Component {
-    static defaultProps = {
-        currencies: [],
-        fetching: false,
-    };
-
-    componentDidMount() {
-        this.props.actions.fetchCurrencies();
-    }
-
-    render() {
-        const {
-            currencies,
-            errors,
-            fetching,
-        } = this.props;
-        return (
-            <Fragment>
-                <Header>
-                    <Title>Crypto quotes</Title>
-                </Header>
-
-                {fetching && <Loader/>}
-
-                {!fetching && !errors.length && <CurrencyList currencies={currencies}/>}
-            </Fragment>);
-    }
-}
+const App = () => 'Basic React Boilerplate 1.0.0';
 
 App.propTypes = {
     currencies: PropTypes.arrayOf(PropTypes.shape({})),

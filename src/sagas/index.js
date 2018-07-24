@@ -1,10 +1,7 @@
-import { all, fork } from 'redux-saga/effects';
-import fetchListings from './fetchListings';
+import { all } from 'redux-saga/effects';
 
 function* rootSaga() {
-    yield all([
-        fork(fetchListings),
-    ]);
+    yield all([]);
 }
 
 export default rootSaga;
