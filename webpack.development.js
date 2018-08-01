@@ -14,12 +14,13 @@ module.exports = merge(common, {
         publicPath: '/',
         hot: true,
         open: true,
+        port: 8080,
     },
 
     entry: {
         bundle: [
             'react-hot-loader/patch',
-            'webpack-dev-server/client?http://localhost:8081',
+            'webpack-dev-server/client',
             'webpack/hot/only-dev-server',
             './src/index.js',
         ],
