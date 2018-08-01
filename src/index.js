@@ -23,10 +23,9 @@ render(App, store);
 
 if (process.env.NODE_ENV === 'development') {
     if (module.hot) {
-        module.hot.accept('./containers/AppContainer', () => {
-            // eslint-disable-next-line
-            const NewApp = require('./containers/AppContainer').default;
-            render(NewApp, store);
+        module.hot.accept('./components/App', async () => {
+            const Next = await import('./components/App');
+            render(Next.default, store);
         });
     }
 }

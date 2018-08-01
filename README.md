@@ -9,21 +9,23 @@ Made with:
    </a>
 </p>
 
-#### Description
-Boilerplate helps you start writing react-redux apps fast and easy. I am trying to make simple tool without lots of libs and dependencies. I hope it will helps students or people who studying frontend development not to dive in deep of javascript modules and libs.
-Build your app with react, redux and webpack. Use styled components. Lint your code, easy build for production, use development tools like HMR, redux-logger, redux dev tools.
+#### About project
+Main idea of boilerplate is simple and minimalistic tool for writing modern react-redux applications. Boilerplate provides easy way to use ES6, ES7, ES8, HMR, linting and testing you code.
 
 #### Quick start
+
 ```sh
 git clone https://github.com/SeregaSE/basic-react-boilerplate.git my-app
 cd my-app
 npm install
 npm start
 ```
-By default go to [http://localhost:8080/](http://localhost:8080/) at your browser for example.
-![alt text](https://github.com/SeregaSE/basic-react-boilerplate/blob/master/docs/img/example.png "Example app screenshot")
+
+Go to [http://localhost:3000](http://localhost:3000). If all is okey you will see your application.
+![alt text](https://github.com/SeregaSE/basic-react-boilerplate/blob/master/docs/img/start-page.png "Example app screenshot")
+
 When you are ready to deploy to production, create a bundle with `npm run build`.
 
 **Branches:**
-* [master](https://github.com/SeregaSE/basic-react-boilerplate) - includes only react and redux
-* [react-redux-router](https://github.com/SeregaSE/basic-react-boilerplate/tree/feature/react-router-redux) - includes react, redux, react-router integrated with redux
+* [master](https://github.com/SeregaSE/basic-react-boilerplate) - Formula: react + redux + redux-saga
+* [react-redux-router](https://github.com/SeregaSE/basic-react-boilerplate/tree/feature/react-router-redux) - Formula: react + redux + redux-saga + react-router

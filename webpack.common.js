@@ -1,6 +1,6 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 
-module.exports = {
+export default {
     module: {
         rules: [
             {
@@ -8,10 +8,6 @@ module.exports = {
                 exclude: /(node_modules|bower_components)/,
                 use: {
                     loader: 'babel-loader',
-                    options: {
-                        presets: ['env', 'react', 'stage-2'],
-                        plugins: ['transform-runtime'],
-                    },
                 },
             },
 

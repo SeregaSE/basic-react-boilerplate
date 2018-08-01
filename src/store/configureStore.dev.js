@@ -1,6 +1,6 @@
 import { createStore, applyMiddleware } from 'redux';
 import createSagaMiddleware from 'redux-saga';
-import { composeWithDevTools } from 'redux-devtools-extension';
+import { composeWithDevTools } from 'redux-devtools-extension'; // eslint-disable-line
 import rootSaga from '../sagas';
 import reducer from '../reducers';
 
@@ -13,7 +13,7 @@ const configureStore = () => {
     if (module.hot) {
         module.hot.accept(
             '../reducers',
-            () => store.replaceReducer(require('../reducers')), // eslint-disable-line
+            () => store.replaceReducer(import('../reducers')),
         );
     }
 

@@ -1,8 +1,9 @@
-const path = require('path');
-const webpack = require('webpack');
-const merge = require('webpack-merge');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const common = require('./webpack.common.js');
+/* eslint-disable import/no-extraneous-dependencies */
+import path from 'path';
+import webpack from 'webpack';
+import merge from 'webpack-merge';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import common from './webpack.common';
 
 module.exports = merge(common, {
     mode: 'development',
@@ -14,7 +15,7 @@ module.exports = merge(common, {
         publicPath: '/',
         hot: true,
         open: true,
-        port: 8080,
+        port: 3000,
     },
 
     entry: {
@@ -28,15 +29,6 @@ module.exports = merge(common, {
 
     module: {
         rules: [
-            {
-                enforce: 'pre',
-                test: /\.js$/,
-                exclude: /(node_modules|bower_components)/,
-                loader: 'eslint-loader',
-                options: {
-                    emitWarning: false,
-                },
-            },
             {
                 test: /\.css$/,
                 use: [

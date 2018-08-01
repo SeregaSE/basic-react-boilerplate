@@ -63,21 +63,14 @@ injectGlobal`
     }
 `;
 
-const App = () => 'Basic React Boilerplate 1.0.0';
+const App = ({ title }) => title;
 
 App.propTypes = {
-    currencies: PropTypes.arrayOf(PropTypes.shape({})),
-    errors: PropTypes.arrayOf(PropTypes.shape({})),
-    fetching: PropTypes.bool,
-    actions: PropTypes.shape({
-        fetchCurrencies: PropTypes.func.isRequired,
-    }).isRequired,
+    title: PropTypes.string,
 };
 
 App.defaultProps = {
-    currencies: [],
-    errors: [],
-    fetching: true,
+    title: 'Basic React Boilerplate 1.0.0',
 };
 
 export default App;

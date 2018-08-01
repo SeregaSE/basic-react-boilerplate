@@ -1,10 +1,10 @@
-const path = require('path');
-const merge = require('webpack-merge');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const common = require('./webpack.common.js');
+import path from 'path';
+import merge from 'webpack-merge';
+import CleanWebpackPlugin from 'clean-webpack-plugin';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import common from './webpack.common';
 
-module.exports = merge(common, {
+export default merge(common, {
     mode: 'production',
 
     entry: {
@@ -13,15 +13,6 @@ module.exports = merge(common, {
 
     module: {
         rules: [
-            {
-                enforce: 'pre',
-                test: /\.js$/,
-                exclude: /(node_modules|bower_components)/,
-                loader: 'eslint-loader',
-                options: {
-                    failOnError: false,
-                },
-            },
             {
                 test: /\.css$/,
                 use: [
