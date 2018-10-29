@@ -1,11 +1,12 @@
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import { injectGlobal } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 import theme from '../../theme';
 import robotoLight from '../../assets/fonts/Roboto-Light.ttf';
 import MaterialIcons from '../../assets/fonts/MaterialIcons-Regular.ttf';
 
 // eslint-disable-next-line
-injectGlobal`
+const GlobalStyle = createGlobalStyle`
     @font-face {
         font-family: 'Roboto';
         font-style: normal;
@@ -63,7 +64,12 @@ injectGlobal`
     }
 `;
 
-const App = ({ title }) => title;
+const App = ({ title }) => (
+    <Fragment>
+        <GlobalStyle />
+        {title}
+    </Fragment>
+);
 
 App.propTypes = {
     title: PropTypes.string,

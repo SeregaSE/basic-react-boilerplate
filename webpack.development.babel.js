@@ -37,16 +37,6 @@ module.exports = merge(common, {
                     'resolve-url-loader',
                 ],
             },
-
-            {
-                test: /\.scss$/,
-                use: [
-                    'style-loader',
-                    'css-loader',
-                    'resolve-url-loader',
-                    'sass-loader?sourceMap',
-                ],
-            },
         ],
     },
 

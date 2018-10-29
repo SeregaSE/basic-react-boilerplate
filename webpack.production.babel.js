@@ -21,16 +21,6 @@ export default merge(common, {
                     'resolve-url-loader',
                 ],
             },
-
-            {
-                test: /\.scss$/,
-                use: [
-                    MiniCssExtractPlugin.loader,
-                    'css-loader',
-                    'resolve-url-loader',
-                    'sass-loader?sourceMap',
-                ],
-            },
         ],
     },
 
