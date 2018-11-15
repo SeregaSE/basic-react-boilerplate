@@ -17,7 +17,9 @@ const render = (Component, store) => ReactDOM.render(
         <ThemeProvider theme={theme}>
             <Component />
         </ThemeProvider>
-    </Provider>, root);
+    </Provider>,
+    root,
+);
 
 render(App, store);
 
@@ -29,4 +31,3 @@ if (process.env.NODE_ENV === 'development') {
         });
     }
 }
-
