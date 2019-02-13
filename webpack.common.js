@@ -18,7 +18,7 @@ export default {
                         loader: 'file-loader',
                         options: {
                             name: '[hash].[ext]',
-                            outputPath: 'images/',
+                            outputPath: 'images',
                         },
                     },
                 ],
@@ -30,7 +30,8 @@ export default {
                     {
                         loader: 'file-loader',
                         options: {
-                            outputPath: 'fonts/',
+                            name: '[name].[ext]',
+                            outputPath: 'fonts',
                         },
                     },
                 ],

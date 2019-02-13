@@ -5,8 +5,6 @@ import { ThemeProvider } from 'styled-components';
 import App from './components/App';
 import configureStore from './store/configureStore';
 import theme from './theme';
-// eslint-disable-next-line
-import 'normalize.css';
 
 const root = document.getElementById('root');
 const store = configureStore();
