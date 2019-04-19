@@ -1,4 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import path from 'path';
 import webpack from 'webpack';
 import merge from 'webpack-merge';
@@ -13,7 +12,6 @@ module.exports = merge(common, {
     devServer: {
         contentBase: './build',
         publicPath: '/',
-        hot: true,
         open: true,
         port: 3000,
     },

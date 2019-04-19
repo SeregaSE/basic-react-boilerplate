@@ -4,13 +4,10 @@ Made with:
   <a href="https://github.com/facebook/react">
     <img alt="react logo" src="https://github.com/SeregaSE/basic-react-boilerplate/blob/master/docs/img/react.svg" width="144">
   </a>
-  <a href="https://github.com/reactjs/redux">
-      <img alt="redux logo" src="https://github.com/SeregaSE/basic-react-boilerplate/blob/master/docs/img/redux.svg" width="144">
-   </a>
 </p>
 
 #### About project
-Main idea of boilerplate is simple and minimalistic tool for writing modern react-redux applications. Boilerplate provides easy way to use ES6, ES7, ES8, HMR, linting and testing you code.
+Main idea of boilerplate is simple and minimalistic tool for writing SPA applications. Boilerplate provides easy way to use modern javacript, linting and testing you code.
 
 #### Quick start
 
@@ -27,5 +24,5 @@ Go to [http://localhost:3000](http://localhost:3000). If all is okey you will se
 When you are ready to deploy to production, create a bundle with `npm run build`.
 
 **Branches:**
-* [master](https://github.com/SeregaSE/basic-react-boilerplate) - Formula: react + redux + redux-saga
-* [react-redux-router](https://github.com/SeregaSE/basic-react-boilerplate/tree/feature/react-router-redux) - Formula: react + redux + redux-saga + react-router
+* [master](https://github.com/SeregaSE/basic-react-boilerplate) - Formula: react only
+* [with-redux](https://github.com/SeregaSE/basic-react-boilerplate) - Formula: react + redux + redux-saga

@@ -4,9 +4,9 @@ module.exports = {
     ],
     'parser': 'babel-eslint',
     'env': {
-        'browser': true,
         'node': true,
         'jest': true,
+        'browser': true,
     },
     'rules': {
         'indent': [1, 4],
