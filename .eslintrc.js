@@ -1,19 +1,41 @@
 module.exports = {
-    'extends': [
-        'airbnb',
-    ],
-    'parser': 'babel-eslint',
-    'env': {
-        'node': true,
-        'jest': true,
+    root: true,
+
+    env: {
         'browser': true,
+        'es6': true
     },
-    'rules': {
-        'indent': [1, 4],
-        'react/jsx-indent': [1, 4],
-        'react/jsx-indent-props': [1, 4],
-        'react/jsx-closing-tag-location': 'off',
-        'import/no-extraneous-dependencies': 'off',
-        'react/jsx-filename-extension': [1, { 'extensions': ['.js', '.jsx'] }],
+
+    parserOptions: {
+        ecmaFeatures: {
+            'jsx': true
+        },
+        ecmaVersion: 6,
+        sourceType: 'module'
     },
+
+    settings: {
+        react: {
+            version: 'detect'
+        }
+    },
+
+    extends: [
+        'eslint:recommended',
+        'plugin:react/recommended'
+    ],
+
+    rules: {
+        'quotes': ['error', 'single'],
+        'comma-dangle': ['error', 'never']
+    },
+
+    overrides: [
+        {
+            files: ['babel.config.js', 'postcss.config.js'],
+            env: {
+                node: true
+            }
+        }
+    ]
 };
