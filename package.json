@@ -7,7 +7,7 @@
     "start": "NODE_ENV=${NODE_ENV=development} PORT=${PORT=3000} webpack-dev-server --config ./webpack/development.js",
     "lint": "eslint --ext .js ./",
     "lint:fix": "eslint --fix --ext .js ./",
-    "build": "NODE_ENV=${NODE_ENV=production} npm run lint:fix && npm test && webpack --config ./webpack/production.js",
+    "build": "npm run lint:fix && npm test && NODE_ENV=${NODE_ENV=production} webpack --config ./webpack/production.js",
     "test": "jest --passWithNoTests ./test"
   },
   "keywords": [
@@ -17,9 +17,9 @@
     "typescript"
   ],
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/SeregaSE/basic-react-boilerplate"
-  },  
+    "type": "git",
+    "url": "https://github.com/SeregaSE/basic-react-boilerplate"
+  },
   "author": "Sergey Sergeyev",
   "license": "MIT",
   "dependencies": {
@@ -41,6 +41,7 @@
     "clean-webpack-plugin": "^2.0.2",
     "copy-webpack-plugin": "^5.0.3",
     "css-loader": "^2.1.1",
+    "cssnano": "^4.1.10",
     "eslint": "^6.0.1",
     "eslint-plugin-react": "^7.14.2",
     "file-loader": "^4.0.0",
