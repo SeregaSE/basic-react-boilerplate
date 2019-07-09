@@ -1,11 +1,20 @@
 module.exports = {
     presets: [
-        ['@babel/preset-env'],
-        '@babel/preset-react',
+        [
+            '@babel/preset-env',
+            {
+                modules: false,
+                loose: false
+            }
+        ],
+        '@babel/preset-react'
     ],
     plugins: [
-        '@babel/plugin-proposal-class-properties',
-        '@babel/plugin-syntax-dynamic-import',
-        '@babel/plugin-transform-runtime',
-    ],
+        [
+            'transform-react-remove-prop-types',
+            {
+                removeImport: true
+            }
+        ]
+    ]
 };

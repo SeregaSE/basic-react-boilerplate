@@ -1,18 +1,13 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
+import style from './style.css';
 
-const App = ({ title }) => (
-    <Fragment>
-        {title}
-    </Fragment>
-);
+const App = () => {
+    return <h1 className={style.title}>Basic React Boilerplate</h1>;
+};
 
 App.propTypes = {
-    title: PropTypes.string,
-};
-
-App.defaultProps = {
-    title: 'HELLO WORLD!',
-};
+    initialCount: PropTypes.number.isRequired
+}
 
 export default App;

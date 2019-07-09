@@ -1,7 +1,10 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
 import App from './components/App';
-
-const root = document.getElementById('root');
-
-ReactDOM.render(<App />, root);
+import 'normalize.css';
+import './theme/global.css';
+            
+render(
+    <App initialCount={0}/>,
+    document.getElementById('root')
+);
