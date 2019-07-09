@@ -1,7 +1,7 @@
 {
   "name": "basic-react-boilerplate",
   "version": "1.0.0",
-  "description": "bootstrap react app fast and easy ",
+  "description": "bootstrap react app fast and easy",
   "main": "src/index.js",
   "scripts": {
     "start": "NODE_ENV=${NODE_ENV=development} PORT=${PORT=3000} webpack-dev-server --config ./webpack/development.js",
