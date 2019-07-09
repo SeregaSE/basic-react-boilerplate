@@ -16,6 +16,10 @@
     "webpack",
     "typescript"
   ],
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/SeregaSE/basic-react-boilerplate"
+  },  
   "author": "Sergey Sergeyev",
   "license": "MIT",
   "dependencies": {
