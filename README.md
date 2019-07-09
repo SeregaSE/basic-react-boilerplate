@@ -25,3 +25,7 @@ When you are ready to deploy to production, create a bundle with `npm run build`
 
 Run webpack-dev-server via npm
 `[NODE_ENV=production|developemnt] [PORT=8080] npm start`
+
+Assets and static
+`assets` direcory is a place where you can keep your static files like fonts/images/videos which would be imported and handled by webpack
+`static` direcory is a place where you can keep your static files like fonts/images/videos which would be copied in build and ignored by webpack
