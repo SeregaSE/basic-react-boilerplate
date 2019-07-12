@@ -23,11 +23,11 @@ Go to [http://localhost:3000](http://localhost:3000). If all is okey you will se
 
 When you are ready to deploy to production, create a bundle with `npm run build`.
 
-Run webpack-dev-server via npm
+#### Run webpack-dev-server via npm
 `[NODE_ENV=production|developemnt] [PORT=8080] npm start`
 
 #### Assets and static
 
-`assets` direcory is a place where you can keep your static files like fonts/images/videos which would be imported and handled by webpack
+`assets` directory is the place where you can keep your static files like fonts/images/videos which will be imported and handled by webpack
 
-`static` direcory is a place where you can keep your static files like fonts/images/videos which would be copied in build and ignored by webpack
+`static` directory is the place where you can keep your static files like fonts/images/videos which will be copied in build and ignored by webpack
