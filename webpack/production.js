@@ -22,11 +22,12 @@ module.exports = merge(base, {
                     {
                         loader: 'css-loader',
                         options: {
+                            importLoaders: 1,
                             modules: true,
                             localIdentName: '[hash:base64:5]' 
                         }
                     },
-                    'postcss-loader'
+                    { loader: 'postcss-loader' }
                 ]
             }
         ]
@@ -37,13 +38,9 @@ module.exports = merge(base, {
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
             filename: '[name].css',
-            chunkFilename: '[id].css'
+            chunkFilename: '[name].css'
         })
     ],
-
-    // postcss: [
-        
-    // ],
 
     optimization: {
         splitChunks: {

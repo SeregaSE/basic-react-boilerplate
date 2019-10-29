@@ -4,7 +4,12 @@ const plugins = [
 ];
 
 if (process.env.NODE_ENV === 'production') {
-    plugins.push(require('cssnano')({ preset: 'default' }))
+    plugins.push(require('cssnano')({
+        preset: ['default', {
+            calc: false,
+            discardComments: { removeAll: true }
+        }]
+    }))
 }
 
 module.exports = {
