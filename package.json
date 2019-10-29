@@ -13,8 +13,7 @@
   "keywords": [
     "react",
     "boilerplate",
-    "webpack",
-    "typescript"
+    "webpack"
   ],
   "repository": {
     "type": "git",
