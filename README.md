@@ -1,4 +1,4 @@
-### Simple and minimalistic boilerplate for React
+### Simple, small and extendable project skeleton for React
 Made with:
 <p align="center">
   <a href="https://github.com/facebook/react">
@@ -7,7 +7,7 @@ Made with:
 </p>
 
 #### About project
-Main idea of boilerplate is simple and minimalistic tool for writing SPA applications. Boilerplate provides easy way to use modern javacript, linting and testing you code.
+Already set up babel, webpack, jest, eslint, prettier, pre-commit, pre-push hooks. Just write code, lint code, test code, do something awesome!
 
 #### Quick start
 
@@ -18,16 +18,7 @@ npm install
 npm start
 ```
 
-Go to [http://localhost:3000](http://localhost:3000). If all is okey you will see your application.
+Go to [http://localhost:8080](http://localhost:8080)
 ![alt text](https://github.com/SeregaSE/basic-react-boilerplate/blob/master/docs/preview.png "Example app screenshot")
 
 When you are ready to deploy to production, create a bundle with `npm run build`.
-
-#### Run webpack-dev-server via npm
-`[NODE_ENV=production|developemnt] [PORT=8080] npm start`
-
-#### Assets and static
-
-`assets` directory is the place where you can keep your static files like fonts/images/videos which will be imported and handled by webpack
-
-`static` directory is the place where you can keep your static files like fonts/images/videos which will be copied in build and ignored by webpack
