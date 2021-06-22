@@ -6,7 +6,9 @@
   "scripts": {
     "start": "webpack serve --open --env development --config webpack/webpack.development.babel.ts",
     "lint": "eslint --ext .js,.ts,.tsx ./src",
-    "lint:fix": "eslint --fix --ext .js,.ts,.tsx ./src",
+    "lint:fix": "npm run lint -- --fix",
+    "stylelint": "stylelint \"src/**/*.css\"",
+    "stylelint:fix": "npm run stylelint -- --fix",
     "build": "webpack --env production --config webpack/webpack.production.babel.ts",
     "test": "babel-node ./node_modules/.bin/jest ./src",
     "prepare": "husky install"
@@ -72,6 +74,10 @@
     "postcss-modules-values": "^4.0.0",
     "prettier": "^2.3.1",
     "style-loader": "^2.0.0",
+    "stylelint": "^13.13.1",
+    "stylelint-config-css-modules": "^2.2.0",
+    "stylelint-config-standard": "^22.0.0",
+    "stylelint-order": "^4.1.0",
     "typescript": "^4.3.4",
     "webpack": "^5.39.1",
     "webpack-cli": "^4.7.2",
