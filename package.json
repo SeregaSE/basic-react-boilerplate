@@ -8,7 +8,8 @@
     "lint": "eslint --ext .js,.ts,.tsx ./src",
     "lint:fix": "eslint --fix --ext .js,.ts,.tsx ./src",
     "build": "webpack --env production --config webpack/webpack.production.babel.ts",
-    "test": "babel-node ./node_modules/.bin/jest ./src"
+    "test": "babel-node ./node_modules/.bin/jest ./src",
+    "prepare": "husky install"
   },
   "keywords": [
     "react",
@@ -21,6 +22,14 @@
   },
   "author": "Sergey Sergeyev",
   "license": "MIT",
+  "lint-staged": {
+    "*.{ts,tsx,js}": [
+      "eslint --fix"
+    ],
+    "*.css": [
+      "stylelint --fix"
+    ]
+  },
   "dependencies": {
     "core-js": "^3.15.0",
     "css-modules-typescript-loader": "^4.0.1",
@@ -55,7 +64,9 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.3.1",
+    "husky": "^6.0.0",
     "jest": "^27.0.4",
+    "lint-staged": "^11.0.0",
     "mini-css-extract-plugin": "^1.6.0",
     "postcss-loader": "^6.1.0",
     "postcss-modules-values": "^4.0.0",
