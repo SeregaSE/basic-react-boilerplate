@@ -12,7 +12,7 @@
     "stylelint": "stylelint \"src/**/*.css\"",
     "stylelint:fix": "npm run stylelint -- --fix",
     "tsc": "tsc --noEmit",
-    "test": "babel-node ./node_modules/.bin/jest ./src",
+    "test": "babel-node ./node_modules/.bin/jest ./src"
   },
   "keywords": [
     "react",
@@ -26,7 +26,7 @@
   "author": "Sergey Sergeyev",
   "license": "MIT",
   "lint-staged": {
-    "*.{ts,tsx,js}": [
+    "*.{ts,tsx,js,jsx}": [
       "eslint --fix"
     ],
     "*.css": [
