@@ -7,7 +7,7 @@
     "prepare": "husky install",
     "build": "webpack --env production --config webpack/webpack.production.babel.ts",
     "start": "webpack serve --open --env development --config webpack/webpack.development.babel.ts",
-    "lint": "eslint --ext .js,.ts,.tsx ./src",
+    "lint": "eslint --ext .js,jsx,.ts,.tsx ./src",
     "lint:fix": "npm run lint -- --fix",
     "stylelint": "stylelint \"src/**/*.css\"",
     "stylelint:fix": "npm run stylelint -- --fix",
