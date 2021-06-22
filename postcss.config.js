@@ -1,8 +1,8 @@
 const plugins = [
     require('autoprefixer'),
-    require('postcss-modules-values')
+    require('postcss-modules-values'),
 ];
 
 module.exports = {
-    plugins
+    plugins,
 };

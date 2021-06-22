@@ -1,6 +1,6 @@
 import merge from 'webpack-merge';
-import base from './webpack.base';
 import { OUTPUT_PATH } from './options';
+import base from './webpack.base';
 
 export default merge(base, {
     mode: 'development',
@@ -16,6 +16,7 @@ export default merge(base, {
         rules: [
             {
                 test: /\.css$/,
+                // eslint-disable-next-line
                 // @ts-ignore
                 use: [
                     'style-loader',
@@ -25,14 +26,14 @@ export default merge(base, {
                         options: {
                             modules: {
                                 localIdentName: '[hash:base64:5]',
-                                exportLocalsConvention: "camelCase"
+                                exportLocalsConvention: "camelCase",
                             },
                             importLoaders: 1,
-                        }
+                        },
                     },
-                    'postcss-loader'
-                ]
-            }
-        ]
-    }
+                    'postcss-loader',
+                ],
+            },
+        ],
+    },
 });

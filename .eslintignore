@@ -1,5 +1,5 @@
+*.css
+*.svg
 .idea
-docs
 build
-assets
 node_modules

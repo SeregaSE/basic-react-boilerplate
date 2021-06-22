@@ -4,15 +4,15 @@ module.exports = {
             '@babel/preset-env',
             {
                 corejs: '^3.9.1',
-                useBuiltIns: 'usage'
-            }
+                useBuiltIns: 'usage',
+            },
         ],
         '@babel/preset-react',
-        '@babel/preset-typescript'
+        '@babel/preset-typescript',
     ],
     plugins: [
         [
-            '@babel/plugin-transform-runtime'
-        ]
-    ]
+            '@babel/plugin-transform-runtime',
+        ],
+    ],
 };

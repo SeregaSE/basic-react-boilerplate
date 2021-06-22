@@ -12,7 +12,7 @@ export default {
     },
 
     entry: {
-        main: ENTRY_POINT
+        main: ENTRY_POINT,
     },
 
     module: {
@@ -22,26 +22,26 @@ export default {
                 exclude: /(node_modules)/,
                 include: path.resolve(__dirname, '../src'),
                 use: {
-                    loader: 'babel-loader'
-                }
+                    loader: 'babel-loader',
+                },
             },
             {
                 test: /\.(svg|png|jpe?g|webp|avif|gif|woff|woff2|eot|ttf|otf)$/,
                 use: {
                     loader: 'file-loader',
                     options: {
-                        name: '[name].[ext]'
-                    }
-                }
-            }
-        ]
+                        name: '[name].[ext]',
+                    },
+                },
+            },
+        ],
     },
 
     plugins: [
         new HTMLWebpackPlugin({
             title: TEMPLATE_TITLE,
-            template: TEMPLATE_PATH
-        })
+            template: TEMPLATE_PATH,
+        }),
     ],
 
     optimization: {
@@ -60,6 +60,6 @@ export default {
 
     output: {
         path: OUTPUT_PATH,
-        filename: '[name].[contenthash].js'
-    }
+        filename: '[name].[contenthash].js',
+    },
 };

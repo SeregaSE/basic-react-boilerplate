@@ -1,5 +1,5 @@
-import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import CssMinimizerPlugin from 'css-minimizer-webpack-plugin';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import merge from 'webpack-merge';
 import base from './webpack.base';
 
@@ -10,6 +10,7 @@ export default merge(base, {
         rules: [
             {
                 test: /\.css$/,
+                // eslint-disable-next-line
                 // @ts-ignore
                 use: [
                     MiniCssExtractPlugin.loader,
@@ -18,26 +19,29 @@ export default merge(base, {
                         options: {
                             modules: {
                                 localIdentName: '[hash:base64:5]',
-                                exportLocalsConvention: "camelCase"
+                                exportLocalsConvention: "camelCase",
                             },
                             importLoaders: 1,
-                        }
+                        },
                     },
-                    'postcss-loader'
-                ]
-            }
-        ]
+                    'postcss-loader',
+                ],
+            },
+        ],
     },
 
     plugins: [
+        // eslint-disable-next-line
         // @ts-ignore
         new MiniCssExtractPlugin({
             filename: '[name].css',
-            chunkFilename: '[id].css'
-        })
+            chunkFilename: '[id].css',
+        }),
     ],
 
     optimization: {
+        // eslint-disable-next-line
+        // @ts-ignore
         minimizer: [
             `...`,
             new CssMinimizerPlugin(),
@@ -45,7 +49,8 @@ export default merge(base, {
     },
 
     output: {
+        // eslint-disable-next-line
         // @ts-ignore
         clean: true,
-    }
+    },
 });
