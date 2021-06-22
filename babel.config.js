@@ -3,18 +3,16 @@ module.exports = {
         [
             '@babel/preset-env',
             {
-                modules: false,
-                loose: false
+                corejs: '^3.9.1',
+                useBuiltIns: 'usage'
             }
         ],
-        '@babel/preset-react'
+        '@babel/preset-react',
+        '@babel/preset-typescript'
     ],
     plugins: [
         [
-            'transform-react-remove-prop-types',
-            {
-                removeImport: true
-            }
+            '@babel/plugin-transform-runtime'
         ]
     ]
 };
