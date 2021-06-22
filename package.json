@@ -4,14 +4,15 @@
   "description": "bootstrap react app fast and easy",
   "main": "src/index.tsx",
   "scripts": {
+    "prepare": "husky install",
+    "build": "webpack --env production --config webpack/webpack.production.babel.ts",
     "start": "webpack serve --open --env development --config webpack/webpack.development.babel.ts",
     "lint": "eslint --ext .js,.ts,.tsx ./src",
     "lint:fix": "npm run lint -- --fix",
     "stylelint": "stylelint \"src/**/*.css\"",
     "stylelint:fix": "npm run stylelint -- --fix",
-    "build": "webpack --env production --config webpack/webpack.production.babel.ts",
+    "tsc": "tsc --noEmit",
     "test": "babel-node ./node_modules/.bin/jest ./src",
-    "prepare": "husky install"
   },
   "keywords": [
     "react",
