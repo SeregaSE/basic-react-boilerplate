@@ -1,4 +1,5 @@
 *.css
+*.css.d.ts
 *.svg
 .idea
 build
