@@ -6,8 +6,16 @@ Made with:
   </a>
 </p>
 
-#### About project
-Already set up babel, css modules, scss, webpack, jest, eslint, prettier, pre-commit, pre-push hooks. Just write code, lint code, test code, do something awesome!
+#### Out of the box:
+- Write on Typescript;
+- Scss, css modules support, autoprefixing css;
+- Development environment with HMR (hot-module-replacement, fast-refresh);
+- Optimized production build; 
+- Babel with preset-env, .browserslistrc and corejs;
+- Ready to use eslint, stylelint, prettier, pre-commit hook (husky and lint-staged);
+- Ready to test jest;
+
+Just do something awesome!
 
 #### Quick start
 
