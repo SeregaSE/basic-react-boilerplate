@@ -9,7 +9,7 @@ export default merge(base, {
     module: {
         rules: [
             {
-                test: /\.css$/,
+                test: /\.scss$/,
                 // eslint-disable-next-line
                 // @ts-ignore
                 use: [
@@ -19,12 +19,13 @@ export default merge(base, {
                         options: {
                             modules: {
                                 localIdentName: '[hash:base64:5]',
-                                exportLocalsConvention: "camelCase",
+                                exportLocalsConvention: 'camelCase',
                             },
-                            importLoaders: 1,
+                            importLoaders: 2,
                         },
                     },
                     'postcss-loader',
+                    'sass-loader',
                 ],
             },
         ],
@@ -42,10 +43,7 @@ export default merge(base, {
     optimization: {
         // eslint-disable-next-line
         // @ts-ignore
-        minimizer: [
-            `...`,
-            new CssMinimizerPlugin(),
-        ],
+        minimizer: ['...', new CssMinimizerPlugin()],
     },
 
     output: {

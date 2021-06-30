@@ -1,0 +1,33 @@
+@import 'theme/colors.scss';
+@import 'theme/typography.scss';
+
+@font-face {
+    font-weight: 400;
+    font-style: normal;
+    font-family: 'Major Mono';
+    src: url('../assets/MajorMonoDisplay-Regular.ttf') format('truetype');
+}
+
+:global(*) {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:global(html), :global(body) {
+    width: 100%;
+    height: 1px;
+    min-height: 100%;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    font-family: $font-family;
+}
+
+:global(#root) {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $on-primary;
+    background: $primary;
+}

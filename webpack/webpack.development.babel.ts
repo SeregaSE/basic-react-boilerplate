@@ -9,13 +9,13 @@ export default merge(base, {
 
     devServer: {
         contentBase: OUTPUT_PATH,
-        // historyApiFallback: true,
+        historyApiFallback: true,
     },
 
     module: {
         rules: [
             {
-                test: /\.css$/,
+                test: /\.scss$/,
                 // eslint-disable-next-line
                 // @ts-ignore
                 use: [
@@ -25,13 +25,20 @@ export default merge(base, {
                         loader: 'css-loader',
                         options: {
                             modules: {
-                                localIdentName: '[hash:base64:5]',
-                                exportLocalsConvention: "camelCase",
+                                localIdentName: '[name]__[local]',
+                                exportLocalsConvention: 'camelCase',
                             },
-                            importLoaders: 1,
+                            sourceMap: true,
+                            importLoaders: 2,
                         },
                     },
                     'postcss-loader',
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            sourceMap: true,
+                        },
+                    },
                 ],
             },
         ],

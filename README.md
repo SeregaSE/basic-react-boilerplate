@@ -7,7 +7,7 @@ Made with:
 </p>
 
 #### About project
-Already set up babel, webpack, jest, eslint, prettier, pre-commit, pre-push hooks. Just write code, lint code, test code, do something awesome!
+Already set up babel, css modules, scss, webpack, jest, eslint, prettier, pre-commit, pre-push hooks. Just write code, lint code, test code, do something awesome!
 
 #### Quick start
 

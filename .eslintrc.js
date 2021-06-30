@@ -112,7 +112,12 @@ module.exports = {
                 ],
                 pathGroups: [
                     {
-                        pattern: 'preact',
+                        pattern: 'react',
+                        group: 'external',
+                        position: 'before',
+                    },
+                    {
+                        pattern: 'react-dom',
                         group: 'external',
                         position: 'before',
                     },
@@ -121,7 +126,7 @@ module.exports = {
                 'newlines-between': 'never',
                 alphabetize: {
                     order: 'asc',
-                    caseInsensitive: true,
+                    caseInsensitive: false,
                 },
             },
         ],

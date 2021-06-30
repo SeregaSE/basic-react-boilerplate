@@ -1,8 +1,8 @@
 import React from 'react';
-import style from './style.css';
+import style from './style.scss';
 
 const App = () => {
-    return <h1 className={style.title}>Basic React Boilerplate</h1>;
+    return <h1 className={style.title}>basic react boilerplate</h1>;
 };
 
 export default App;

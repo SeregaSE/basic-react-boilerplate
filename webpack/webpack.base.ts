@@ -1,18 +1,23 @@
 import path from 'path';
 import HTMLWebpackPlugin from 'html-webpack-plugin';
-import { ENTRY_POINT, OUTPUT_PATH, TEMPLATE_PATH, TEMPLATE_TITLE } from './options';
+import {
+    ENTRY_POINT,
+    OUTPUT_PATH,
+    SCSS_ENTRY_POINT,
+    TEMPLATE_PATH,
+    TEMPLATE_TITLE,
+} from './options';
 
 export default {
     resolve: {
         alias: {
-            components: path.resolve(__dirname, '../src/components/'),
-            theme: path.resolve(__dirname, '../src/theme/'),
+            '@components': path.resolve(__dirname, '../src/components/'),
         },
         extensions: ['.tsx', '.ts', '.jsx', '.js', '.css', '.json'],
     },
 
     entry: {
-        main: ENTRY_POINT,
+        main: [ENTRY_POINT, SCSS_ENTRY_POINT],
     },
 
     module: {

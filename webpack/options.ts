@@ -2,6 +2,8 @@ import path from 'path';
 
 export const ENTRY_POINT = path.resolve(__dirname, '../src/index.tsx');
 
+export const SCSS_ENTRY_POINT = path.resolve(__dirname, '../src/index.scss');
+
 export const OUTPUT_PATH = path.resolve(__dirname, '../build');
 
 export const TEMPLATE_PATH = path.resolve(__dirname, '../template.html');
