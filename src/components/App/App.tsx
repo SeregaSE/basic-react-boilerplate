@@ -1,8 +1,21 @@
 import React from 'react';
-import style from './style.scss';
+import { Route, Switch } from 'react-router-dom';
+import About from '@components/About';
+import Home from '@components/Home';
 
 const App = () => {
-    return <h1 className={style.title}>basic react boilerplate</h1>;
+    return (
+        <>
+            <Switch>
+                <Route exact path="/">
+                    <Home />
+                </Route>
+                <Route path="/about">
+                    <About />
+                </Route>
+            </Switch>
+        </>
+    );
 };
 
 export default App;
