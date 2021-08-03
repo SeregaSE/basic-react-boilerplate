@@ -9,7 +9,7 @@
     "start": "webpack serve --open --hot --env development --config webpack/webpack.development.babel.ts",
     "lint": "eslint --ext .js,jsx,.ts,.tsx ./src",
     "lint:fix": "npm run lint -- --fix",
-    "stylelint": "stylelint \"src/**/*.css\"",
+    "stylelint": "stylelint \"src/**/*.scss\"",
     "stylelint:fix": "npm run stylelint -- --fix",
     "tsc": "tsc --noEmit",
     "test": "babel-node ./node_modules/.bin/jest ./src"

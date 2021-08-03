@@ -52,7 +52,15 @@ module.exports = {
         'key-spacing': ['error', { beforeColon: false, afterColon: true }],
         'keyword-spacing': ['error', { before: true, after: true }],
         'linebreak-style': ['error', 'unix'],
-        'max-len': ['error', { code: 80, comments: 160, ignoreStrings: true }],
+        'max-len': [
+            'error',
+            {
+                code: 80,
+                ignoreComments: true,
+                ignoreStrings: true,
+                ignoreTemplateLiterals: true,
+            },
+        ],
         'new-cap': ['error', { newIsCap: true, capIsNew: false }],
         'new-parens': 'error',
         'no-empty': ['error', { allowEmptyCatch: true }],
