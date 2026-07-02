@@ -1,0 +1,11 @@
+:root {
+    /* Colors */
+    --primary: rgb(29, 47, 148);
+    --on-primary: #fff;
+    --on-primary-co: #c9c9c9;
+
+    /* Typography */
+    --font-size: 16px;
+    --font-weight: 400;
+    --font-family: 'Major Mono', 'Courier New', monospace;
+}
