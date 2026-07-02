@@ -1,11 +1,11 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
+
 import Title from '@components/Title';
 
 const About = () => {
     return (
         <>
-            <Title>&copy; all rights reserved. 2018.</Title>
+            <Title>{`© all rights reserved. 2018-${new Date().getFullYear()}.`}</Title>
             <Link to="/">go to home</Link>
         </>
     );

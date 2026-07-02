@@ -1,6 +1,0 @@
-*.scss
-*.scss.d.ts
-*.svg
-.idea
-build
-node_modules

@@ -1,0 +1,73 @@
+{
+    "$schema": "https://biomejs.dev/schemas/2.5.2/schema.json",
+    "vcs": {
+        "enabled": true,
+        "clientKind": "git",
+        "useIgnoreFile": true
+    },
+    "files": {
+        "ignoreUnknown": true,
+        "includes": ["**", "!docs", "!dist", "!build"]
+    },
+    "formatter": {
+        "enabled": true,
+        "indentStyle": "space",
+        "indentWidth": 4,
+        "lineWidth": 80
+    },
+    "assist": {
+        "actions": {
+            "source": {
+                "organizeImports": {
+                    "level": "on",
+                    "options": {
+                        "groups": [
+                            [
+                                "react",
+                                "react-dom",
+                                "react-dom/**",
+                                "react-router-dom",
+                                "react-router-dom/**"
+                            ],
+                            ":BLANK_LINE:",
+                            [
+                                ":NODE:",
+                                ":PACKAGE:",
+                                ":PACKAGE_WITH_PROTOCOL:",
+                                ":URL:",
+                                ":ALIAS:",
+                                ":PATH:"
+                            ]
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "linter": {
+        "enabled": true,
+        "rules": {
+            "preset": "recommended"
+        },
+        "domains": {
+            "react": "recommended",
+            "test": "recommended"
+        }
+    },
+    "javascript": {
+        "formatter": {
+            "quoteStyle": "single",
+            "trailingCommas": "es5",
+            "semicolons": "always"
+        }
+    },
+    "css": {
+        "formatter": {
+            "enabled": true,
+            "quoteStyle": "single"
+        },
+        "linter": {
+            "enabled": true
+        }
+    }
+}
